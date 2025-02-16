@@ -1,0 +1,5 @@
+<div class="p-8 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 my-5">
+    @for (product of products(); track product.id) {
+    <app-product-card [product]="product" />
+    }
+</div>

@@ -1,0 +1,12 @@
+<div class="pt-2 flex justify-between items-center max-w-[750px]">
+    <div class="flex gap-4">
+        <img class="h-[50px] w-[50px] object-contain" [src]="item().image" />
+        <div class="flex flex-col">
+            <p class="text-md font-bold">{{ item().title}}</p>
+            <p class="text-sm ">₹{{ item().price}}</p>
+        </div>
+    </div>
+    <div class="flex justify-end">
+        <app-button label="Remove" (btnClicked)="cartService.removeFromCart(item().id)" />
+    </div>
+</div>
