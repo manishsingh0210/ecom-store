@@ -1,5 +1,10 @@
 <div class="bg-slate-100 px-4 py-3 shadow-md flex justify-between items-center">
-    <h2 routerLink="/" class="cursor-pointer">Ecom Store</h2>
+    <h2 routerLink="/" class="cursor-pointer text-2xl font-bold flex">
+        <img class="h-[35px] w-[35px]" src="https://img.icons8.com/?size=100&id=65006&format=png&color=000000" />
+        <span>
+            Ecom Store
+        </span>
+    </h2>
     <app-button [label]="'Cart (' + cartService.cart().length + ')'" (btnClicked)="handleButtonClick()"
         routerLink="/cart" />
 </div>
