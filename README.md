@@ -26,9 +26,9 @@ This project is a modern, responsive e-commerce storefront application built wit
 
 - **Header Cart Button:** A cart icon in the header allows quick access to the cart page.
 
-  ![Product list page](image.png)
+  ![Product list page](/src/assets/images/image.png)
 
-  ![Cart & order summary](image-1.png)
+  ![Cart & order summary](/src/assets/images/image-1.png)
 
 ## Todo / Planned Features
 
