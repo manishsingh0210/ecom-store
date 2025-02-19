@@ -10,7 +10,7 @@ import productList from '../../utils/mockData';
   styles: ``
 })
 export class ProductsListComponent {
-  products = signal<Product[]>(productList)
+  products = signal<Product[]>(productList);
 
   //* Make API call through a service
   // async ngOnInit() {

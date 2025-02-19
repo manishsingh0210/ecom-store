@@ -6,13 +6,37 @@ import { Product } from '../models/products.model';
 })
 export class CartService {
   cart = signal<Product[]>([]);
-
   addToCart(product: Product) {
-    this.cart.set([...this.cart(), product]);
+    const existingProduct = this.cart().find(item => item.id === product.id);
+
+    if (existingProduct) {
+      this.cart.update(items =>
+        items.map(item =>
+          item.id === product.id
+            ? { ...item, quantity: (item.quantity || 1) + 1 }
+            : item
+        )
+      );
+    } else {
+      this.cart.update(items => [...items, { ...product, quantity: 1 }]);
+    }
   }
 
   removeFromCart(id: number) {
-    this.cart.set(this.cart().filter(item => item.id !== id));
+    const existingProduct = this.cart().find(item => item.id === id);
+
+    if (existingProduct && existingProduct.quantity && existingProduct.quantity > 1) {
+      // Decrease quantity if more than 1
+      this.cart.update(items =>
+        items.map(item =>
+          item.id === id
+            ? { ...item, quantity: item.quantity! - 1 }
+            : item
+        )
+      );
+    } else {
+      this.cart.update(items => items.filter(item => item.id !== id));
+    }
   }
 
   constructor() { }

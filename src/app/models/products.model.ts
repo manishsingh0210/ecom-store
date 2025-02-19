@@ -4,8 +4,9 @@ export interface Product {
     category: string,
     image: string,
     price: number,
-    stock?: number | undefined,
-    rating: Rating
+    stock: number,
+    rating: Rating,
+    quantity?: number;
 }
 
 export interface Rating {

@@ -55,6 +55,7 @@ const productList: Product[] = [
         "price": 695,
         "category": "jewelery",
         "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+        "stock": 0,
         "rating": {
             "rate": 4.6,
             "count": 400
@@ -235,6 +236,7 @@ const productList: Product[] = [
 
         "category": "women's clothing",
         "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
+        "stock": 0,
         "rating": {
             "rate": 3.6,
             "count": 145

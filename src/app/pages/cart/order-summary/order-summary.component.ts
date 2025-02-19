@@ -13,7 +13,7 @@ export class OrderSummaryComponent {
   total = computed(() => {
     let total = 0;
     for (const item of this.cartService.cart()) {
-      total += item.price;
+      total += item.price * (item.quantity ?? 0);
     }
     return total;
   })
