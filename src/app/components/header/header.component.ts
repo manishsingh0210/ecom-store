@@ -11,8 +11,4 @@ import { RouterLink } from '@angular/router';
 export class HeaderComponent {
 
   cartService = inject(CartService);
-
-  handleButtonClick() {
-    console.log('Button is clicked')
-  }
 }
